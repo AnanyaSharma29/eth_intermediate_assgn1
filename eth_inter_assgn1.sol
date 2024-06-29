@@ -12,9 +12,9 @@ contract SContract {
     }
     
     function assertIncrease (uint _amount) external {
-        // Using assert() to check an invariant
+        
         uint newWorth = Worth + _amount;
-        assert(newWorth > Worth);
+        assert(newWorth > Worth); //check for conditions that should never be false
         
         Worth = newWorth;
     }
